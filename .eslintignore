@@ -1,0 +1,12 @@
+*.feature
+*.snap
+*.json
+test/playwright/reports/*
+test/playwright/videos/*
+test/playwright/screenshots/*
+test/playwright/logs/*
+cucumber.report.js
+cucumber.node.js
+cucumber.js
+test/playwright/resources/*.zip
+test/playwright/resources/*.txt
