@@ -1,7 +1,13 @@
-import { Box } from "@mui/material";
+import { ThemeProvider } from "@mui/material";
+import { theme } from "./theme";
+import { HomePage } from "@/components/pages";
 
 function App() {
-  return <Box className="App">Here you are</Box>;
+  return (
+    <ThemeProvider theme={theme}>
+      <HomePage />
+    </ThemeProvider>
+  );
 }
 
 export default App;
