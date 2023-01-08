@@ -1,12 +1,13 @@
 import { MouseEvent, useState } from "react";
 import Popover from "@mui/material/Popover";
-import Typography from "@mui/material/Typography";
-import { DropdownProps } from "@/components/molecules";
+import { DropdownProps, Option } from "@/components/molecules";
 import {
   DropdownButton,
   DropdownContainer,
+  DropdownList,
   KeyboardArrowDownIcon,
 } from "@/components/molecules/dropdowns/Dropdown/Dropdown.styles";
+import { DropdownOption } from "@/components/molecules/dropdowns/Dropdown/DropdownOption";
 
 export function Dropdown({
   placeholder,
@@ -15,6 +16,11 @@ export function Dropdown({
   options,
 }: DropdownProps) {
   const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
+
+  const handleChange = (option: Option) => {
+    onChange(option);
+    handleClose();
+  };
 
   const handleClick = (event: MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
@@ -29,7 +35,9 @@ export function Dropdown({
   return (
     <DropdownContainer>
       <DropdownButton onClick={handleClick} endIcon={<KeyboardArrowDownIcon />}>
-        {placeholder}
+        {selectedOption
+          ? `${placeholder}: ${selectedOption?.label}`
+          : placeholder}
       </DropdownButton>
       <Popover
         open={open}
@@ -39,8 +47,17 @@ export function Dropdown({
           vertical: "bottom",
           horizontal: "left",
         }}
+        sx={{ marginTop: (theme) => theme.spacing(1) }}
       >
-        <Typography sx={{ p: 2 }}>The content of the Popover.</Typography>
+        <DropdownList>
+          {options.map((option) => (
+            <DropdownOption
+              key={option.value}
+              option={option}
+              onClick={handleChange}
+            />
+          ))}
+        </DropdownList>
       </Popover>
     </DropdownContainer>
   );

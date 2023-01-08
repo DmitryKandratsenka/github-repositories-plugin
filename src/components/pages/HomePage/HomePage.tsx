@@ -1,6 +1,6 @@
-import { MainHeader } from "@/components/molecules";
+import { HomePageToolbar, MainHeader } from "@/components/molecules";
+import { AllCountries } from "@/components/organisms";
 import { ContentContainer, MainContainer } from "@/components/templates";
-import { MainPageToolbar } from "@/components/molecules/HomePageToolbar/HomePageToolbar";
 
 export function HomePage() {
   return (
@@ -9,7 +9,8 @@ export function HomePage() {
       <ContentContainer
         sx={{ backgroundColor: (theme) => theme.palette.primary.light }}
       >
-        <MainPageToolbar />
+        <HomePageToolbar />
+        <AllCountries />
       </ContentContainer>
     </MainContainer>
   );

@@ -10,6 +10,7 @@ export const MainContainer = styled("main")(({ theme }) => ({
 
 export const ContentContainer = styled("section")(({ theme }) => ({
   display: "flex",
+  flexDirection: "column",
   paddingTop: theme.spacing(4),
   paddingBottom: theme.spacing(4),
   paddingLeft: theme.spacing(2),

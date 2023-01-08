@@ -1,11 +1,26 @@
 import { FilterByRegionDropdown, Toolbar } from "@/components/molecules";
-import { SearchInput } from "@/components/atoms";
+import { CountrySearchInput } from "@/components/atoms";
+import { Box } from "@mui/material";
 
-export function MainPageToolbar() {
+export function HomePageToolbar() {
   return (
     <Toolbar>
-      <SearchInput />
-      <FilterByRegionDropdown />
+      <Box
+        sx={{
+          marginRight: (theme) => theme.spacing(5),
+          marginBottom: (theme) => theme.spacing(5),
+          width: "100%",
+        }}
+      >
+        <CountrySearchInput />
+      </Box>
+      <Box
+        sx={{
+          marginBottom: (theme) => theme.spacing(5),
+        }}
+      >
+        <FilterByRegionDropdown />
+      </Box>
     </Toolbar>
   );
 }

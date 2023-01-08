@@ -9,9 +9,7 @@ export const Search = styled("div")(({ theme }) => ({
   backgroundColor: theme.palette.background.default,
   width: "100%",
   height: 60,
-  minWidth: 300,
-  marginRight: theme.spacing(5),
-  marginBottom: theme.spacing(5),
+  minWidth: 280,
   boxShadow: `0px 0px 5px 0px ${theme.palette.primary.main}`,
   [theme.breakpoints.up(MOBILE_WIDTH)]: {
     maxWidth: SEARCH_INPUT_DESKTOP_WIDTH,

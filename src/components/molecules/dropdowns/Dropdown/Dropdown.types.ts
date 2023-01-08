@@ -1,11 +1,11 @@
 export interface DropdownProps {
   placeholder: string;
-  options: OptionProps[];
-  onChange: (option: OptionProps) => void;
-  selectedOption?: OptionProps;
+  options: Option[];
+  onChange: (option: Option) => void;
+  selectedOption?: Option;
 }
 
-export interface OptionProps {
+export interface Option {
   label: string;
   value: string;
 }

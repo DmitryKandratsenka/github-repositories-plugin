@@ -1,4 +1,4 @@
-import { Button, styled } from "@mui/material";
+import { Button, List, styled } from "@mui/material";
 // import { KeyboardArrowDownIcon as KeyboardArrowDownIconMui } from "@mui/icons-material";
 import KeyboardArrowDownIconMui from "@mui/icons-material/KeyboardArrowDown";
 
@@ -19,6 +19,16 @@ export const DropdownButton = styled(Button)(({ theme }) => ({
   [theme.breakpoints.up("md")]: {
     flexDirection: "row",
     justifyContent: "space-between",
+    minWidth: 300,
+  },
+}));
+
+export const DropdownList = styled(List)(({ theme }) => ({
+  minWidth: 190,
+  boxSizing: "border-box",
+  paddingTop: theme.spacing(2),
+  paddingBottom: theme.spacing(2),
+  [theme.breakpoints.up("md")]: {
     minWidth: 300,
   },
 }));
