@@ -15,7 +15,10 @@ export function CountryDetailsPage() {
     <MainContainer>
       <MainHeader />
       <ContentContainer
-        sx={{ backgroundColor: (theme) => theme.palette.background.default }}
+        sx={{
+          backgroundColor: (theme) => theme.palette.background.default,
+          overflow: "auto",
+        }}
       >
         <CountryDetailsPageToolbar />
         {data ? <CountryDetails countryDetails={data} /> : <CircularProgress />}
