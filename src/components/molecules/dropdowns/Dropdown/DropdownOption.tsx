@@ -13,7 +13,7 @@ export function DropdownOption({ option, onClick }: Props) {
   }, [option, onClick]);
 
   return (
-    <ListItem value={option.value} disablePadding>
+    <ListItem value={option.value} disablePadding role={"option"}>
       <ListItemButton
         sx={{ paddingX: (theme) => theme.spacing(4) }}
         onClick={handleClick}

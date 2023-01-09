@@ -49,7 +49,7 @@ export function Dropdown({
         }}
         sx={{ marginTop: (theme) => theme.spacing(1) }}
       >
-        <DropdownList>
+        <DropdownList role={"menu"}>
           {options.map((option) => (
             <DropdownOption
               key={option.value}

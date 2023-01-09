@@ -1,5 +1,7 @@
 import { IWorldOptions, World } from "@cucumber/cucumber";
-import { Browser, Frame, Page } from "playwright";
+import { Browser, chromium, Frame, Page } from "playwright";
+
+const PWDEBUG = process.env.PWDEBUG === "1";
 
 export class CustomWorld extends World {
   debug = false;
@@ -13,10 +15,17 @@ export class CustomWorld extends World {
   }
 
   async init() {
-    if (!this.browser) {
-      throw new Error(`Browser was not defined`);
-    }
-    const page = await this.browser.newPage();
+    const options = PWDEBUG ? { slowMo: 1500 } : undefined;
+
+    let browser: Browser = await chromium.launch(options);
+    const context = await browser.newContext();
+
+    await context.tracing.start({ screenshots: true, snapshots: true });
+    const page = await browser.newPage();
+
+    this.setBrowser(browser);
+
+    this.startTime = Date.now();
     this.setPage(page);
     this.pageConsole();
 
