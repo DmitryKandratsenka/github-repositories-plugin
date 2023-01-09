@@ -3,6 +3,12 @@ export interface CountryDetails extends CountryBase {
   subregion: string;
   topLevelDomain: string;
   languages: CountryLanguage[];
+  currencies: Currency[];
+  borders: string[];
+}
+
+export interface Currency {
+  name: string;
 }
 
 export interface CountryBase {

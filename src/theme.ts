@@ -15,6 +15,9 @@ export const theme = createTheme({
     h6: {
       fontWeight: 800,
     },
+    h5: {
+      fontWeight: 800,
+    },
     subtitle1: {
       fontWeight: 600,
       fontSize: 14,
@@ -28,6 +31,10 @@ export const theme = createTheme({
     },
     body2: {
       fontSize: 16,
+    },
+    caption: {
+      fontSize: 18,
+      fontWeight: 600,
     },
   },
 });

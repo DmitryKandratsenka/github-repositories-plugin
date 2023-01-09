@@ -1,9 +1,15 @@
 {
   "back": "Back",
+  "border.countries": "Border Countries:",
   "capital": "Capital:",
+  "currencies": "Currencies:",
   "filter.by.region": "Filter by Region",
+  "languages": "Languages:",
+  "native.name": "Native Name:",
   "population": "Population:",
   "region": "Region:",
   "search.for.a.country": "Search for a country...",
+  "sub.region": "Sub Region:",
+  "top.level.domain": "Top Level Domain:",
   "where.in.the.world": "Where in the world?"
 }

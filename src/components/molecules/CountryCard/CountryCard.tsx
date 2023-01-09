@@ -1,21 +1,18 @@
 import { CountryBase } from "@/hooks/api/rest-countries/types";
 import { Box, Skeleton, Typography } from "@mui/material";
-import {
-  CardWrapper,
-  DescriptionItemContainer,
-  SubTitleTypography,
-} from "@/components/molecules/CountryCard/CountryCard.styles";
+import { CardWrapper } from "@/components/molecules/CountryCard/CountryCard.styles";
 import { useTranslation } from "@/hooks/useTranslation";
 import { DynamicIcon } from "@/components/atoms/DynamicIcon";
 import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import { AppRoute } from "@/enums/AppRoute";
+import { DescriptionLine } from "@/components/molecules/DescriptionLine";
 
 interface Props {
   country: CountryBase;
 }
 
-function LoadingFlag() {
+function FlagLoader() {
   return <Skeleton width={"100%"} height={215} />;
 }
 
@@ -33,9 +30,9 @@ export function CountryCard({ country }: Props) {
         url={country.flag}
         width={"100%"}
         height={215}
-        loading={LoadingFlag}
+        loading={FlagLoader}
       />
-      {/*<LoadingFlag />*/}
+      {/*<FlagLoader />*/}
       <Box mx={2} my={3}>
         <Typography
           variant={"h6"}
@@ -43,27 +40,24 @@ export function CountryCard({ country }: Props) {
         >
           {country.name}
         </Typography>
-
-        <DescriptionItemContainer>
-          <SubTitleTypography variant={"subtitle1"}>
-            {t("population")}
-          </SubTitleTypography>
-          <Typography variant={"body1"}>
-            {country.population.toLocaleString()}
-          </Typography>
-        </DescriptionItemContainer>
-        <DescriptionItemContainer>
-          <SubTitleTypography variant={"subtitle1"}>
-            {t("region")}
-          </SubTitleTypography>
-          <Typography variant={"body1"}>{country.region}</Typography>
-        </DescriptionItemContainer>
-        <DescriptionItemContainer>
-          <SubTitleTypography variant={"subtitle1"}>
-            {t("capital")}
-          </SubTitleTypography>
-          <Typography variant={"body1"}>{country.capital}</Typography>
-        </DescriptionItemContainer>
+        <DescriptionLine
+          title={t("population")}
+          variantTitle={"subtitle1"}
+          variantBody={"body1"}
+          body={country.population.toLocaleString()}
+        />
+        <DescriptionLine
+          title={t("region")}
+          variantTitle={"subtitle1"}
+          variantBody={"body1"}
+          body={country.region}
+        />
+        <DescriptionLine
+          title={t("capital")}
+          variantTitle={"subtitle1"}
+          variantBody={"body1"}
+          body={country.capital}
+        />
       </Box>
     </CardWrapper>
   );
