@@ -7,6 +7,9 @@ import {
 } from "@/components/molecules/CountryCard/CountryCard.styles";
 import { useTranslation } from "@/hooks/useTranslation";
 import { DynamicIcon } from "@/components/atoms/DynamicIcon";
+import { useCallback } from "react";
+import { useNavigate } from "react-router-dom";
+import { AppRoute } from "@/enums/AppRoute";
 
 interface Props {
   country: CountryBase;
@@ -18,9 +21,14 @@ function LoadingFlag() {
 
 export function CountryCard({ country }: Props) {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+
+  const handleClick = useCallback(() => {
+    navigate(AppRoute.COUNTRY_DETAILS + "/" + country.alpha3Code);
+  }, [navigate]);
 
   return (
-    <CardWrapper elevation={3}>
+    <CardWrapper elevation={3} onClick={handleClick}>
       <DynamicIcon
         url={country.flag}
         width={"100%"}

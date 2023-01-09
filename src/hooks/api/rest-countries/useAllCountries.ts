@@ -3,6 +3,10 @@ import { CountryBase } from "@/hooks/api/rest-countries/types";
 
 export function useAllCountries() {
   return useCountriesApi<CountryBase[]>(
-    "/all?fields=name,population,flag,capital,region"
+    "/all?fields=name,population,flag,capital,region,alpha3Code",
+    {
+      cacheTime: Infinity,
+      staleTime: Infinity,
+    }
   );
 }

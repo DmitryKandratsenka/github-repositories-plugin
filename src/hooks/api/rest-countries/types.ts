@@ -11,6 +11,7 @@ export interface CountryBase {
   population: number;
   region: string;
   capital: string;
+  alpha3Code: string;
 }
 
 export interface CountryLanguage {
