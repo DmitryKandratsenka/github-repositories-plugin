@@ -13,7 +13,7 @@ export function CountryDetailsPage() {
     <MainContainer>
       <MainHeader />
       <ContentContainer
-        sx={{ backgroundColor: (theme) => theme.palette.primary.light }}
+        sx={{ backgroundColor: (theme) => theme.palette.background.default }}
       >
         <CountryDetailsPageToolbar />
       </ContentContainer>

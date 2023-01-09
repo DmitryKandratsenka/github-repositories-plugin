@@ -44,15 +44,17 @@ export function AllCountries() {
 
   const filteredData = useMemo<CountryBase[]>(() => {
     return (
-      data?.filter((country: CountryBase) => {
-        return (
-          country.name.toLowerCase().includes(searchValue.toLowerCase()) &&
-          (filterByRegion
-            ? country.region.toLowerCase() ===
-              filterByRegion?.value.toLowerCase()
-            : true)
-        );
-      }) || []
+      data
+        ?.sort((a, b) => Number(b.population) - Number(a.population))
+        .filter((country: CountryBase) => {
+          return (
+            country.name.toLowerCase().includes(searchValue.toLowerCase()) &&
+            (filterByRegion
+              ? country.region.toLowerCase() ===
+                filterByRegion?.value.toLowerCase()
+              : true)
+          );
+        }) || []
     );
   }, [data, searchValue, filterByRegion]);
 
