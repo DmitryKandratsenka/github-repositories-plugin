@@ -11,6 +11,25 @@ export const theme = createTheme({
       default: "hsl(0, 0%, 100%)",
     },
   },
+  typography: {
+    h6: {
+      fontWeight: 800,
+    },
+    subtitle1: {
+      fontWeight: 600,
+      fontSize: 14,
+    },
+    subtitle2: {
+      fontWeight: 600,
+      fontSize: 16,
+    },
+    body1: {
+      fontSize: 14,
+    },
+    body2: {
+      fontSize: 16,
+    },
+  },
 });
 
 export const MOBILE_WIDTH = 376;

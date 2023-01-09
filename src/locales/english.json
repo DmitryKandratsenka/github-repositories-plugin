@@ -1,5 +1,8 @@
 {
+  "capital": "Capital:",
   "filter.by.region": "Filter by Region",
+  "population": "Population:",
+  "region": "Region:",
   "search.for.a.country": "Search for a country...",
   "where.in.the.world": "Where in the world?"
 }

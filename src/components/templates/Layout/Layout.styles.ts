@@ -1,5 +1,4 @@
 import { styled } from "@mui/material";
-import { MOBILE_WIDTH } from "@/theme";
 
 export const MainContainer = styled("main")(({ theme }) => ({
   display: "flex",
@@ -18,7 +17,7 @@ export const ContentContainer = styled("section")(({ theme }) => ({
   height: "100%",
   boxShadow: `inset 0px 9px 10px -13px ${theme.palette.primary.main}`,
   marginLeft: 0,
-  [theme.breakpoints.up(MOBILE_WIDTH)]: {
+  [theme.breakpoints.up("sm")]: {
     paddingTop: theme.spacing(5),
     paddingBottom: theme.spacing(5),
     paddingLeft: theme.spacing(8),

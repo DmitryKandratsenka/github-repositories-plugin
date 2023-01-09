@@ -1,18 +1,62 @@
 import { CountryBase } from "@/hooks/api/rest-countries/types";
-import { Typography } from "@mui/material";
-import { CardWrapper } from "@/components/molecules/CountryCard/CountryCard.styles";
+import { Box, Skeleton, Typography } from "@mui/material";
+import {
+  CardWrapper,
+  DescriptionItemContainer,
+  SubTitleTypography,
+} from "@/components/molecules/CountryCard/CountryCard.styles";
+import { useTranslation } from "@/hooks/useTranslation";
+import { DynamicIcon } from "@/components/atoms/DynamicIcon";
 
 interface Props {
   country: CountryBase;
 }
 
+function LoadingFlag() {
+  return <Skeleton width={"100%"} height={215} />;
+}
+
 export function CountryCard({ country }: Props) {
+  const { t } = useTranslation();
+
   return (
     <CardWrapper elevation={3}>
-      <Typography>{country.name}</Typography>
-      <Typography>{country.population}</Typography>
-      <Typography>{country.region}</Typography>
-      <Typography>{country.capital}</Typography>
+      <DynamicIcon
+        url={country.flag}
+        width={"100%"}
+        height={215}
+        loading={LoadingFlag}
+      />
+      {/*<LoadingFlag />*/}
+      <Box mx={2} my={3}>
+        <Typography
+          variant={"h6"}
+          sx={{ marginBottom: (theme) => theme.spacing(2) }}
+        >
+          {country.name}
+        </Typography>
+
+        <DescriptionItemContainer>
+          <SubTitleTypography variant={"subtitle1"}>
+            {t("population")}
+          </SubTitleTypography>
+          <Typography variant={"body1"}>
+            {country.population.toLocaleString()}
+          </Typography>
+        </DescriptionItemContainer>
+        <DescriptionItemContainer>
+          <SubTitleTypography variant={"subtitle1"}>
+            {t("region")}
+          </SubTitleTypography>
+          <Typography variant={"body1"}>{country.region}</Typography>
+        </DescriptionItemContainer>
+        <DescriptionItemContainer>
+          <SubTitleTypography variant={"subtitle1"}>
+            {t("capital")}
+          </SubTitleTypography>
+          <Typography variant={"body1"}>{country.capital}</Typography>
+        </DescriptionItemContainer>
+      </Box>
     </CardWrapper>
   );
 }

@@ -14,7 +14,17 @@ export function GridContainer(props: GridProps) {
 }
 
 export function GridItem(props: GridProps) {
-  return <Grid item xs={12} sm={12} md={6} lg={3} {...props} />;
+  return (
+    <Grid
+      item
+      xs={12}
+      sm={12}
+      md={6}
+      lg={3}
+      sx={{ display: "flex", justifyContent: "center" }}
+      {...props}
+    />
+  );
 }
 
 export function AllCountries() {
