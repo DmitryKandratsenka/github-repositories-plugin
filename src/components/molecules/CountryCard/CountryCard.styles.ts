@@ -7,6 +7,13 @@ export const CardWrapper = styled(Card)(({ theme }) => ({
   maxWidth: 400,
   borderRadius: 16,
   width: "100%",
+  cursor: "pointer",
+  position: "relative",
+  top: 0,
+  transition: "top 1s ease-out 100ms",
+  "&:hover": {
+    top: "-20px",
+  },
 }));
 
 export const DescriptionItemContainer = styled(Box)(({ theme }) => ({

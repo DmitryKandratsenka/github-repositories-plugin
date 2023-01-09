@@ -18,3 +18,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@keyframes moveup {
+  from { top: 0;}
+  to { top: -20px;}
+}

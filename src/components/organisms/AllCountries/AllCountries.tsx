@@ -10,7 +10,16 @@ import { CountryBase } from "@/hooks/api/rest-countries/types";
 const PAGE_SIZE = 16;
 
 export function GridContainer(props: GridProps) {
-  return <Grid container spacing={4} {...props} />;
+  return (
+    <Grid
+      container
+      spacing={4}
+      sx={{
+        marginTop: (theme) => theme.spacing(3),
+      }}
+      {...props}
+    />
+  );
 }
 
 export function GridItem(props: GridProps) {
