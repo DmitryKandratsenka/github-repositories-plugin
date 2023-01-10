@@ -1,4 +1,4 @@
-# Welcome to Repo
+# Welcome to my home task repository. This project was created to demonstrate my coding skills and UI tech stack knowledge.
 
 This project uses the following tech stack:
 #### ReactJS
