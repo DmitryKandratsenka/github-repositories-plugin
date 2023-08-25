@@ -1,7 +1,7 @@
 export interface DropdownProps {
-  placeholder: string;
-  options: Option[];
   onChange: (option: Option) => void;
+  options: Option[];
+  placeholder: string;
   selectedOption?: Option;
 }
 

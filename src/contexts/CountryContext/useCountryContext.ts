@@ -2,17 +2,17 @@ import { createContext, useContext } from "react";
 import { Option } from "@/components/molecules";
 
 const initialCountryContext: CountryContextI = {
-  searchValue: "",
   filterByRegion: undefined,
-  setSearchValue: () => {},
+  searchValue: "",
   setFilterByRegion: () => {},
+  setSearchValue: () => {},
 };
 
 export interface CountryContextI {
-  searchValue: string;
   filterByRegion: Option | undefined;
-  setSearchValue: (value: string) => void;
+  searchValue: string;
   setFilterByRegion: (value: Option) => void;
+  setSearchValue: (value: string) => void;
 }
 
 export const CountryContext = createContext(initialCountryContext);

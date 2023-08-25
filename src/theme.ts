@@ -2,30 +2,16 @@ import { createTheme } from "@mui/material/styles";
 
 export const theme = createTheme({
   palette: {
-    primary: {
-      light: "hsl(0, 0%, 98%)",
-      main: "hsl(0, 0%, 52%)",
-      dark: "hsl(200, 15%, 8%)",
-    },
     background: {
       default: "hsl(0, 0%, 100%)",
     },
+    primary: {
+      dark: "hsl(200, 15%, 8%)",
+      light: "hsl(0, 0%, 98%)",
+      main: "hsl(0, 0%, 52%)",
+    },
   },
   typography: {
-    h6: {
-      fontWeight: 800,
-    },
-    h5: {
-      fontWeight: 800,
-    },
-    subtitle1: {
-      fontWeight: 600,
-      fontSize: 14,
-    },
-    subtitle2: {
-      fontWeight: 600,
-      fontSize: 16,
-    },
     body1: {
       fontSize: 14,
     },
@@ -34,6 +20,20 @@ export const theme = createTheme({
     },
     caption: {
       fontSize: 18,
+      fontWeight: 600,
+    },
+    h5: {
+      fontWeight: 800,
+    },
+    h6: {
+      fontWeight: 800,
+    },
+    subtitle1: {
+      fontSize: 14,
+      fontWeight: 600,
+    },
+    subtitle2: {
+      fontSize: 16,
       fontWeight: 600,
     },
   },

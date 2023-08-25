@@ -1,10 +1,10 @@
 export interface CountryDetails extends CountryBase {
+  borders: string[];
+  currencies: Currency[];
+  languages: CountryLanguage[];
   nativeName: string;
   subregion: string;
   topLevelDomain: string;
-  languages: CountryLanguage[];
-  currencies: Currency[];
-  borders: string[];
 }
 
 export interface Currency {
@@ -12,20 +12,20 @@ export interface Currency {
 }
 
 export interface CountryBase {
+  alpha3Code: string;
+  capital: string;
   flag: string;
   name: string;
   population: number;
   region: string;
-  capital: string;
-  alpha3Code: string;
 }
 
 export interface CountryLanguage {
+  borders: string[];
   iso639_1: string;
   iso639_2: string;
   name: string;
   nativeName: string;
-  borders: string[];
 }
 
 export interface Region {

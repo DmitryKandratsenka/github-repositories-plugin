@@ -1,15 +1,15 @@
 import axios, { AxiosRequestConfig } from "axios";
-import { useQuery } from "@/hooks/api/useQuery";
 import type {
   UseQueryOptions as UseReactQueryOptions,
   UseQueryResult,
 } from "react-query";
+import { useQuery } from "@/hooks/api/useQuery";
 
 export type UseQueryOptions<Data> = Omit<
   UseReactQueryOptions<Data>,
   "queryFn" | "queryKey"
 >;
-export function useApi<Data>(
+export function useAxiosQueryClient<Data>(
   url: string,
   useQueryOptions?: UseQueryOptions<Data>,
   axiosRequestConfig?: AxiosRequestConfig<Data>
@@ -25,6 +25,6 @@ export function useApi<Data>(
       return data;
     },
     useQueryOptions,
-    axiosRequestConfig
+    { baseUrl: axiosRequestConfig?.baseURL, params: axiosRequestConfig?.params }
   );
 }

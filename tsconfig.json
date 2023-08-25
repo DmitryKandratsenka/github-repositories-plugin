@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -17,17 +21,26 @@
     "noImplicitAny": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
-      "assets/*": ["assets/*"],
-      "test/*": ["test/*"]
+      "@/*": [
+        "src/*"
+      ],
+      "assets/*": [
+        "assets/*"
+      ],
+      "test/*": [
+        "test/*"
+      ]
     },
-    "rootDirs": ["src/", "test/"]
+    "rootDirs": [
+      "src/",
+      "test/"
+    ]
   },
   "include": [
     "src",
     "test",
     "@types",
-    ".eslintrc.js",
+    ".eslintrc.json",
     "cucumber.js",
     "cucumber.report.js",
     "cucumber.node.js",
@@ -35,7 +48,10 @@
     "webpack.dev.js",
     "webpack.prod.js",
     "babel.config.js",
-    "jest.config.js"
+    "jest.config.js",
+    "environment.d.ts"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }

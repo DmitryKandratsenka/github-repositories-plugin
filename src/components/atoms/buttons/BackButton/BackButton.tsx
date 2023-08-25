@@ -1,8 +1,8 @@
-import { Button } from "../Button";
-import { useTranslation } from "@/hooks/useTranslation";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "@/hooks/useTranslation";
+import { Button } from "../Button";
 
 export function BackButton() {
   const { t } = useTranslation();
@@ -23,9 +23,9 @@ export function BackButton() {
         />
       }
       sx={{
-        width: 150,
-        textTransform: "capitalize",
         display: "flex",
+        textTransform: "capitalize",
+        width: 150,
       }}
       onClick={handleClick}
     >

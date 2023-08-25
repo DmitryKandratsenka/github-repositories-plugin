@@ -1,12 +1,12 @@
+import SearchIcon from "@mui/icons-material/Search";
+import { useCallback } from "react";
 import {
   Search,
   SearchIconWrapper,
   StyledInputBase,
 } from "./CountrySearchInput.styles";
-import SearchIcon from "@mui/icons-material/Search";
 import { useTranslation } from "@/hooks/useTranslation";
 import { useCountryContext } from "@/contexts";
-import { useCallback } from "react";
 
 export function CountrySearchInput() {
   const { searchValue, setSearchValue } = useCountryContext();

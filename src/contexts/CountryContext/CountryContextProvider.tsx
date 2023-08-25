@@ -1,5 +1,5 @@
-import { CountryContext, CountryContextI } from "@/contexts";
 import { PropsWithChildren, useMemo, useState } from "react";
+import { CountryContext, CountryContextI } from "@/contexts";
 import { Option } from "@/components/molecules";
 
 export function CountryContextProvider({ children }: PropsWithChildren<{}>) {
@@ -10,10 +10,10 @@ export function CountryContextProvider({ children }: PropsWithChildren<{}>) {
 
   const value = useMemo<CountryContextI>(
     () => ({
-      searchValue,
       filterByRegion,
-      setSearchValue: (value: string) => setSearchValue(value),
+      searchValue,
       setFilterByRegion: (value: Option) => setFilterByRegion(value),
+      setSearchValue: (value: string) => setSearchValue(value),
     }),
     [searchValue, filterByRegion]
   );

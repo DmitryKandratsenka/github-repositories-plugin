@@ -7,7 +7,7 @@ export function MainHeader() {
 
   return (
     <MainHeaderContainer>
-      <Typography variant={"h6"}>{t("where.in.the.world")}</Typography>
+      <Typography variant="h6">{t("where.in.the.world")}</Typography>
     </MainHeaderContainer>
   );
 }

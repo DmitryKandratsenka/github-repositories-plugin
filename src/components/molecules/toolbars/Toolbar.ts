@@ -17,4 +17,4 @@ export const ToolbarItemContainer = styled("div")(({ theme }) => ({
   },
 }));
 
-export const ToolbarItem = styled("div")(({ theme }) => ({}));
+export const ToolbarItem = styled("div")(() => ({}));

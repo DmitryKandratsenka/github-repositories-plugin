@@ -1,15 +1,15 @@
+import { Typography } from "@mui/material";
+import { Variant } from "@mui/material/styles/createTypography";
 import {
   DescriptionItemContainer,
   SubTitleTypography,
 } from "@/components/molecules/CountryCard/CountryCard.styles";
-import { Typography } from "@mui/material";
-import { Variant } from "@mui/material/styles/createTypography";
 
 interface Props {
-  title: string;
   body: string;
-  variantTitle: Variant;
+  title: string;
   variantBody: Variant;
+  variantTitle: Variant;
 }
 
 export function DescriptionLine({

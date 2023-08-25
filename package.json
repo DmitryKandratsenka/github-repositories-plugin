@@ -3,17 +3,19 @@
   "version": "0.1.0",
   "engine-strict": true,
   "engines": {
-    "node": ">=20.x"
+    "node": ">=18.x"
   },
   "homepage": "https://dmitrykandratsenka.github.io/github-repositories-plugin",
   "private": true,
   "dependencies": {
+    "@octokit/types": "11.1.0",
     "@emotion/react": "11.10.5",
     "@emotion/styled": "11.10.5",
     "@mui/icons-material": "5.10.9",
     "@mui/material": "5.11.3",
     "axios": "0.26.1",
     "dotenv": "16.0.3",
+    "octokit": "3.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-infinite-scroll-component": "^6.1.0",
@@ -26,7 +28,10 @@
     "start": "webpack serve --config webpack.dev.js --progress --open",
     "build": "webpack --config webpack.prod.js --progress",
     "cucumber": "cucumber-js",
-    "test": "npm run cucumber test/playwright/features"
+    "test": "npm run cucumber test/playwright/features",
+    "lint": "npx eslint \"src/**/*.{ts,tsx}\"",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "prettier --write \"src/**/*.{ts,tsx}\""
   },
   "eslintConfig": {
     "extends": [

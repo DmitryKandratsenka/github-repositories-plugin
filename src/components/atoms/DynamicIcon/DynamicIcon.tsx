@@ -3,10 +3,10 @@ import { ReactSVG } from "react-svg";
 import { styled } from "@mui/material";
 
 interface IconProps {
-  url: string;
-  width: string | number;
   height: string | number;
   loading: ComponentType;
+  url: string;
+  width: string | number;
 }
 
 export const StyledReactSVG = styled(ReactSVG)(() => ({}));
@@ -17,8 +17,8 @@ export const DynamicIcon: FC<IconProps> = ({ url, width, height, loading }) => {
       src={url}
       sx={{
         "& svg": {
-          width: width,
-          height: height,
+          height,
+          width,
         },
       }}
       loading={loading}

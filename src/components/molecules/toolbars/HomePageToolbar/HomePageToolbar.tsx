@@ -1,10 +1,10 @@
+import { Box } from "@mui/material";
 import {
   FilterByRegionDropdown,
   Toolbar,
   ToolbarItemContainer,
 } from "@/components/molecules";
 import { CountrySearchInput } from "@/components/atoms";
-import { Box } from "@mui/material";
 
 export function HomePageToolbar() {
   return (

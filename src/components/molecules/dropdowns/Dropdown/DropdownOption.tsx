@@ -1,10 +1,10 @@
 import { ListItem, ListItemButton } from "@mui/material";
-import { Option } from "@/components/molecules";
 import { useCallback } from "react";
+import { Option } from "@/components/molecules";
 
 interface Props {
-  option: Option;
   onClick: (option: Option) => void;
+  option: Option;
 }
 
 export function DropdownOption({ option, onClick }: Props) {
@@ -13,7 +13,7 @@ export function DropdownOption({ option, onClick }: Props) {
   }, [option, onClick]);
 
   return (
-    <ListItem value={option.value} disablePadding role={"option"}>
+    <ListItem value={option.value} disablePadding role="option">
       <ListItemButton
         sx={{ paddingX: (theme) => theme.spacing(4) }}
         onClick={handleClick}

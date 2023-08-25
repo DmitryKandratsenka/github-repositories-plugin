@@ -1,14 +1,17 @@
-import { useApi, UseQueryOptions } from "@/hooks/api/useApi";
 import { AxiosRequestConfig } from "axios";
+import {
+  useAxiosQueryClient,
+  UseQueryOptions,
+} from "@/hooks/api/useAxiosQueryClient";
 
-const COUNTRY_API_URL = process.env.COUNTRY_API_URL;
+const { COUNTRY_API_URL } = process.env;
 
 export function useCountriesApi<Data>(
   path: string,
   useQueryOptions?: UseQueryOptions<Data>,
   axiosRequestConfig?: AxiosRequestConfig<Data>
 ) {
-  return useApi(
+  return useAxiosQueryClient(
     `${COUNTRY_API_URL}${path}`,
     useQueryOptions,
     axiosRequestConfig

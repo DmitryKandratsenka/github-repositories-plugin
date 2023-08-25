@@ -4,35 +4,29 @@ import { MOBILE_WIDTH } from "@/theme";
 const SEARCH_INPUT_DESKTOP_WIDTH = 600;
 
 export const Search = styled("div")(({ theme }) => ({
-  position: "relative",
-  borderRadius: theme.shape.borderRadius,
   backgroundColor: theme.palette.background.default,
-  width: "100%",
+  borderRadius: theme.shape.borderRadius,
+  boxShadow: `0px 0px 5px 0px ${theme.palette.primary.main}`,
   height: 60,
   minWidth: 280,
-  boxShadow: `0px 0px 5px 0px ${theme.palette.primary.main}`,
+  position: "relative",
+  width: "100%",
   [theme.breakpoints.up(MOBILE_WIDTH)]: {
     maxWidth: SEARCH_INPUT_DESKTOP_WIDTH,
   },
 }));
 
 export const SearchIconWrapper = styled("div")(({ theme }) => ({
-  padding: theme.spacing(0, 2),
-  height: "100%",
-  position: "absolute",
-  pointerEvents: "none",
-  display: "flex",
   alignItems: "center",
+  display: "flex",
+  height: "100%",
   justifyContent: "center",
+  padding: theme.spacing(0, 2),
+  pointerEvents: "none",
+  position: "absolute",
 }));
 
 export const StyledInputBase = styled(InputBase)(({ theme }) => ({
-  color: "inherit",
-  height: "100%",
-  width: "100%",
-  [theme.breakpoints.up(MOBILE_WIDTH)]: {
-    maxWidth: SEARCH_INPUT_DESKTOP_WIDTH,
-  },
   "& .MuiInputBase-input": {
     padding: theme.spacing(1, 1, 1, 0),
     // vertical padding + font size from searchIcon
@@ -43,4 +37,10 @@ export const StyledInputBase = styled(InputBase)(({ theme }) => ({
       maxWidth: SEARCH_INPUT_DESKTOP_WIDTH,
     },
   },
+  color: "inherit",
+  height: "100%",
+  [theme.breakpoints.up(MOBILE_WIDTH)]: {
+    maxWidth: SEARCH_INPUT_DESKTOP_WIDTH,
+  },
+  width: "100%",
 }));

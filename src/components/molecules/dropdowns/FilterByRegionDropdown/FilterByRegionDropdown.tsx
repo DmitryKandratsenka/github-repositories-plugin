@@ -1,6 +1,6 @@
+import { useCallback, useMemo } from "react";
 import { Dropdown, Option } from "@/components/molecules";
 import { useTranslation } from "@/hooks/useTranslation";
-import { useCallback, useMemo } from "react";
 import { REGIONS } from "@/constants/Region";
 import { useCountryContext } from "@/contexts";
 

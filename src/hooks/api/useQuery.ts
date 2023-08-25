@@ -1,4 +1,3 @@
-import { AxiosRequestConfig } from "axios";
 import type {
   QueryFunction,
   QueryKey,
@@ -12,14 +11,19 @@ export type UseQueryOptions<Data> = Omit<
   "queryFn" | "queryKey"
 >;
 
+export interface QueryKeyProps {
+  baseUrl?: string;
+  params?: string;
+}
+
 export function useQuery<Data>(
   url: string,
   queryFn: QueryFunction<Data, QueryKey>,
   useQueryOptions?: UseQueryOptions<Data>,
-  axiosConfig?: AxiosRequestConfig<Data>
+  queryKeyProps?: QueryKeyProps
 ): UseQueryResult<Data> {
   return useReactQuery<Data>(
-    [url, axiosConfig?.params, axiosConfig?.baseURL],
+    [url, queryKeyProps?.params, queryKeyProps?.baseUrl],
     queryFn,
     {
       refetchOnMount: true,

@@ -4,11 +4,11 @@ export function CircularProgress() {
   return (
     <Box
       sx={{
-        width: "100%",
-        height: 150,
-        display: "flex",
-        justifyContent: "center",
         alignItems: "center",
+        display: "flex",
+        height: 150,
+        justifyContent: "center",
+        width: "100%",
       }}
     >
       <CircularProgressMui size={50} />

@@ -1,10 +1,9 @@
-import { Button } from "../Button";
-import { useTranslation } from "@/hooks/useTranslation";
 import { useCallback, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
+import { ButtonProps, CircularProgress } from "@mui/material";
+import { Button } from "../Button";
 import { useAllCountries } from "@/hooks/api/rest-countries/useAllCountries";
 import { AppRoute } from "@/enums/AppRoute";
-import { ButtonProps, CircularProgress } from "@mui/material";
 
 interface Props extends ButtonProps {
   countryCode: string;
@@ -12,12 +11,11 @@ interface Props extends ButtonProps {
 
 export function BorderCountryButton({ countryCode, sx, ...rest }: Props) {
   const { data } = useAllCountries();
-  const { t } = useTranslation();
   const navigate = useNavigate();
 
   const handleClick = useCallback(() => {
     navigate(`${AppRoute.COUNTRY_DETAILS}/${countryCode}`);
-  }, [navigate]);
+  }, [countryCode, navigate]);
 
   const name = useMemo(() => {
     return (
@@ -29,14 +27,14 @@ export function BorderCountryButton({ countryCode, sx, ...rest }: Props) {
     <Button
       {...rest}
       sx={{
+        height: 30,
         minWidth: 50,
         textTransform: "capitalize",
-        height: 30,
         ...sx,
       }}
       onClick={handleClick}
     >
-      {name ? name : <CircularProgress />}
+      {name || <CircularProgress />}
     </Button>
   );
 }

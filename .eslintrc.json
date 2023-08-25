@@ -1,8 +1,5 @@
 {
   "root": true,
-  "ignorePatterns": [
-    "**/*"
-  ],
   "env": {
     "jest": true
   },
@@ -30,6 +27,8 @@
     "sort-keys-fix"
   ],
   "rules": {
+    "react/function-component-definition": "off",
+    "import/prefer-default-export": "off",
     "@typescript-eslint/lines-between-class-members": [
       "error",
       "always",

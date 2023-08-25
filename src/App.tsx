@@ -1,9 +1,9 @@
 import { ThemeProvider } from "@mui/material";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import { theme } from "./theme";
 import { CountryDetailsPage, HomePage } from "@/components/pages";
-import { QueryClient, QueryClientProvider } from "react-query";
 import { CountryContextProvider } from "@/contexts";
-import { HashRouter, Route, Routes } from "react-router-dom";
 import { AppRoute } from "@/enums/AppRoute";
 import Redirect from "@/router/Redirect";
 

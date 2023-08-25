@@ -17,6 +17,10 @@ export function Dropdown({
 }: DropdownProps) {
   const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
 
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
   const handleChange = (option: Option) => {
     onChange(option);
     handleClose();
@@ -24,10 +28,6 @@ export function Dropdown({
 
   const handleClick = (event: MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
   };
 
   const open = Boolean(anchorEl);
@@ -44,12 +44,12 @@ export function Dropdown({
         anchorEl={anchorEl}
         onClose={handleClose}
         anchorOrigin={{
-          vertical: "bottom",
           horizontal: "left",
+          vertical: "bottom",
         }}
         sx={{ marginTop: (theme) => theme.spacing(1) }}
       >
-        <DropdownList role={"menu"}>
+        <DropdownList role="menu">
           {options.map((option) => (
             <DropdownOption
               key={option.value}

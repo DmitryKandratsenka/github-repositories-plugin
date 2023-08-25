@@ -3,10 +3,10 @@ import { ReactElement } from "react";
 import { CircularProgress } from "@/components/atoms";
 
 export interface InfiniteScrollProps {
-  items?: ReactElement;
   fetchData: () => any;
-  length?: number;
   hasMore: boolean;
+  items?: ReactElement;
+  length?: number;
 }
 
 export function InfiniteScroll({
