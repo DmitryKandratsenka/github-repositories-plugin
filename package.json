@@ -5,6 +5,7 @@
   "engines": {
     "node": ">=20.x"
   },
+  "homepage": "https://dmitrykandratsenka.github.io/github-repositories-plugin",
   "private": true,
   "dependencies": {
     "@emotion/react": "11.10.5",
