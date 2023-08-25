@@ -1,0 +1,20 @@
+{
+  "background_color": "hsl(0, 0%, 98%)",
+  "display": "standalone",
+  "icons": [
+    {
+      "sizes": "16x16",
+      "src": "favicon.ico",
+      "type": "image/x-icon"
+    }
+  ],
+  "name": "Find your country",
+  "short_name": "FYC",
+  "start_url": ".",
+  "theme_color": "hsl(0, 0%, 98%)",
+  "bundle.js": "auto/js/bundle.078798c69e730f9be366.bundle.js",
+  "favicon.ico": "auto/favicon.ico",
+  "index.html": "auto/index.html",
+  ".env": "auto/.env",
+  "bundle.bundle.map": "auto/js/bundle.7dd19d4e1867580482149db81af7251d.bundle.map"
+}
