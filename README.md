@@ -1,7 +1,6 @@
 # Welcome to my home task repository. This project was created to demonstrate my coding skills and UI tech stack knowledge.
 
-The application was deployed using Github Pages:
-#### https://dmitrykandratsenka.github.io/github-repositories-plugin"
+## The application was deployed using Github Pages: https://dmitrykandratsenka.github.io/github-repositories-plugin
 
 This project uses the following tech stack:
 #### ReactJS
