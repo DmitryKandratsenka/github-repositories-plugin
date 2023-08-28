@@ -1,1 +1,1 @@
-export * from "./DescriptionLine";
+export * from './DescriptionLine';

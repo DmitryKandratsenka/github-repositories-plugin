@@ -1,12 +1,13 @@
-import { Typography } from "@mui/material";
-import { Variant } from "@mui/material/styles/createTypography";
+import { Typography } from '@mui/material';
+import { Variant } from '@mui/material/styles/createTypography';
+import { PropsWithChildren } from 'react';
 import {
   DescriptionItemContainer,
   SubTitleTypography,
-} from "@/components/molecules/CountryCard/CountryCard.styles";
+} from '@/components/molecules/GithubRepoCard/GithubRepoCard.styles';
 
 interface Props {
-  body: string;
+  body?: string;
   title: string;
   variantBody: Variant;
   variantTitle: Variant;
@@ -17,11 +18,12 @@ export function DescriptionLine({
   body,
   variantTitle,
   variantBody,
-}: Props) {
+  children,
+}: PropsWithChildren<Props>) {
   return (
     <DescriptionItemContainer>
       <SubTitleTypography variant={variantTitle}>{title}</SubTitleTypography>
-      <Typography variant={variantBody}>{body}</Typography>
+      {body ? <Typography variant={variantBody}>{body}</Typography> : children}
     </DescriptionItemContainer>
   );
 }

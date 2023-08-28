@@ -6,9 +6,9 @@ const options = {
   launchReport: true,
   noInlineScreenshots: false,
   output: 'test/playwright/reports/index.html',
-  reportSuiteAsScenaros: true,
+  reportSuiteAsScenarios: true,
   screenshotsDirectory: 'test/playwright/screenshots/',
-  storeScreenshots: false,
+  storeScreenshots: true,
   theme: 'bootstrap',
 };
 

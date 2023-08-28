@@ -1,13 +1,16 @@
-import { ListItem, ListItemButton } from "@mui/material";
-import { useCallback } from "react";
-import { Option } from "@/components/molecules";
+import { ListItem, ListItemButton } from '@mui/material';
+import { useCallback } from 'react';
+import { Option } from '@/components/molecules';
 
-interface Props {
-  onClick: (option: Option) => void;
-  option: Option;
+interface Props<T extends string> {
+  onClick: (option: Option<T>) => void;
+  option: Option<T>;
 }
 
-export function DropdownOption({ option, onClick }: Props) {
+export function DropdownOption<T extends string>({
+  option,
+  onClick,
+}: Props<T>) {
   const handleClick = useCallback(() => {
     onClick(option);
   }, [option, onClick]);

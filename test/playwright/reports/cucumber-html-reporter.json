@@ -1,0 +1,541 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "home-page-functionality:-search-repository-by-name;01---show-my-favourites",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "01 - Show my favourites",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "Home page is loaded",
+            "match": {
+              "location": "test/playwright/step-definitions/common-steps.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1103467916
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "\"GitHub repository plugin\" text is visible",
+            "match": {
+              "location": "test/playwright/step-definitions/common-steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15255208
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "\"dmitrykandratsenka\" is entered for placeholder \"Search for a repository...\"",
+            "match": {
+              "location": "test/playwright/step-definitions/common-steps.ts:159"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4024207
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "\"Filter: All\" text is visible",
+            "match": {
+              "location": "test/playwright/step-definitions/common-steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1717124
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "User adds repository \"github-repositories-plugin\" to favourites",
+            "match": {
+              "location": "test/playwright/step-definitions/common-steps.ts:260"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 859247792
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "User clicks on \"Filter: All\"",
+            "match": {
+              "location": "test/playwright/step-definitions/common-steps.ts:178"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 37715250
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "User selects menu option \"My favourites\"",
+            "match": {
+              "location": "test/playwright/step-definitions/common-steps.ts:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 207594707
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "\"\" is entered for placeholder \"Search for a repository...\"",
+            "match": {
+              "location": "test/playwright/step-definitions/common-steps.ts:159"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3813665
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "Github repo card has text \"github-repositories-plugin\"",
+            "match": {
+              "location": "test/playwright/step-definitions/common-steps.ts:239"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2686040
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 7397000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "home-page-functionality:-search-repository-by-name",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Home page functionality: search repository by name",
+    "tags": [],
+    "uri": "test/playwright/features/favourites-repos.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "home-page-functionality:-search-repository-by-name;01---default-input-value-is-entered",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "01 - Default input value is entered",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "Home page is loaded",
+            "match": {
+              "location": "test/playwright/step-definitions/common-steps.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1087187625
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "\"GitHub repository plugin\" text is visible",
+            "match": {
+              "location": "test/playwright/step-definitions/common-steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17976625
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "\"dmitrykandratsenka\" is entered for placeholder \"Search for a repository...\"",
+            "match": {
+              "location": "test/playwright/step-definitions/common-steps.ts:159"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4704874
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "\"Filter: All\" text is visible",
+            "match": {
+              "location": "test/playwright/step-definitions/common-steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2282958
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "Github repository authored by \"dmitrykandratsenka\" is visible",
+            "match": {
+              "location": "test/playwright/step-definitions/common-steps.ts:218"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 861517667
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 7211249
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "home-page-functionality:-search-repository-by-name;02---search-by-author-name",
+        "keyword": "Scenario Outline",
+        "line": 17,
+        "name": "02 - Search by author name",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "Home page is loaded",
+            "match": {
+              "location": "test/playwright/step-definitions/common-steps.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1112078458
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "\"GitHub repository plugin\" text is visible",
+            "match": {
+              "location": "test/playwright/step-definitions/common-steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13738209
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "User enters \"dmitrykandratsenka\" for placeholder \"Search for a repository...\"",
+            "match": {
+              "location": "test/playwright/step-definitions/common-steps.ts:140"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18576667
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "Github repository authored by \"dmitrykandratsenka\" is visible",
+            "match": {
+              "location": "test/playwright/step-definitions/common-steps.ts:218"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 866174749
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 8717999
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "home-page-functionality:-search-repository-by-name;02---search-by-author-name",
+        "keyword": "Scenario Outline",
+        "line": 18,
+        "name": "02 - Search by author name",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "Home page is loaded",
+            "match": {
+              "location": "test/playwright/step-definitions/common-steps.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1104060999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "\"GitHub repository plugin\" text is visible",
+            "match": {
+              "location": "test/playwright/step-definitions/common-steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14294916
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "User enters \"microsoft\" for placeholder \"Search for a repository...\"",
+            "match": {
+              "location": "test/playwright/step-definitions/common-steps.ts:140"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24044499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "Github repository authored by \"microsoft\" is visible",
+            "match": {
+              "location": "test/playwright/step-definitions/common-steps.ts:218"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1865527333
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 5029375
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "home-page-functionality:-search-repository-by-name;02---search-by-author-name",
+        "keyword": "Scenario Outline",
+        "line": 19,
+        "name": "02 - Search by author name",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "Home page is loaded",
+            "match": {
+              "location": "test/playwright/step-definitions/common-steps.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1098838458
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "\"GitHub repository plugin\" text is visible",
+            "match": {
+              "location": "test/playwright/step-definitions/common-steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13069999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "User enters \"facebook\" for placeholder \"Search for a repository...\"",
+            "match": {
+              "location": "test/playwright/step-definitions/common-steps.ts:140"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22786374
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "Github repository authored by \"facebook\" is visible",
+            "match": {
+              "location": "test/playwright/step-definitions/common-steps.ts:218"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1860894209
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 10290416
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "home-page-functionality:-search-repository-by-name;03---github-repository-card-is-displayed-properly",
+        "keyword": "Scenario Outline",
+        "line": 27,
+        "name": "03 - Github repository card is displayed properly",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "Home page is loaded",
+            "match": {
+              "location": "test/playwright/step-definitions/common-steps.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1108708874
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "\"GitHub repository plugin\" text is visible",
+            "match": {
+              "location": "test/playwright/step-definitions/common-steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13639708
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 22,
+            "name": "User enters \"DmitryKandratsenka/github-repositories-plugin\" for placeholder \"Search for a repository...\"",
+            "match": {
+              "location": "test/playwright/step-definitions/common-steps.ts:140"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 28468916
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 23,
+            "name": "Github repo card has text \"DmitryKandratsenka/github-repositories-plugin\"",
+            "match": {
+              "location": "test/playwright/step-definitions/common-steps.ts:239"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1860970458
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 24,
+            "name": "Github repo card has text \"683006117\"",
+            "match": {
+              "location": "test/playwright/step-definitions/common-steps.ts:239"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1892583
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 3797500
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "home-page-functionality:-search-repository-by-name",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Home page functionality: search repository by name",
+    "tags": [],
+    "uri": "test/playwright/features/home-page.feature"
+  }
+]

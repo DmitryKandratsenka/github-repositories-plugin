@@ -1,6 +1,6 @@
-import InfiniteScrollComponent from "react-infinite-scroll-component";
-import { ReactElement } from "react";
-import { CircularProgress } from "@/components/atoms";
+import InfiniteScrollComponent from 'react-infinite-scroll-component';
+import { ReactElement } from 'react';
+import { CircularProgress } from '@/components/atoms';
 
 export interface InfiniteScrollProps {
   fetchData: () => any;

@@ -1,1 +1,1 @@
-export * from "./CountryDetailsPageToolbar";
+export * from './GithubRepoDetailsPageToolbar';

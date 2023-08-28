@@ -1,14 +1,14 @@
-import { createTheme } from "@mui/material/styles";
+import { createTheme } from '@mui/material/styles';
 
 export const theme = createTheme({
   palette: {
     background: {
-      default: "hsl(0, 0%, 100%)",
+      default: 'hsl(0, 0%, 100%)',
     },
     primary: {
-      dark: "hsl(200, 15%, 8%)",
-      light: "hsl(0, 0%, 98%)",
-      main: "hsl(0, 0%, 52%)",
+      dark: 'hsl(200, 15%, 8%)',
+      light: 'hsl(0, 0%, 98%)',
+      main: 'hsl(0, 0%, 52%)',
     },
   },
   typography: {

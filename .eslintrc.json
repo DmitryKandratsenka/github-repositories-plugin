@@ -114,12 +114,7 @@
         ]
       }
     ],
-    "prettier/prettier": [
-      "error",
-      {
-        "signleQuote": true
-      }
-    ],
+    "prettier/prettier": ["error", { "singleQuote": true }],
     // this rule react logs a console error if a key is not set
     "react/jsx-key": [
       "error"

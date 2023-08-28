@@ -1,9 +1,9 @@
-import { styled } from "@mui/material";
+import { styled } from '@mui/material';
 
-export const MainHeaderContainer = styled("header")(({ theme }) => ({
-  alignItems: "center",
+export const MainHeaderContainer = styled('header')(({ theme }) => ({
+  alignItems: 'center',
   background: theme.palette.background.default,
-  display: "flex",
+  display: 'flex',
   height: 40,
   paddingBottom: theme.spacing(3),
   paddingLeft: theme.spacing(8),

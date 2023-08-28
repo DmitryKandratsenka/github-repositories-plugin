@@ -1,43 +1,27 @@
-Feature: Home page functionality: filtering, sorting by population.
+Feature: Home page functionality: search repository by name
 
   Background:
     Given Home page is loaded
-    Then "Where in the world?" text is visible
+    Then "GitHub repository plugin" text is visible
 
-  Scenario: 01 - Filter by country name works properly
-    Then "China" text is visible
-    Then "India" text is visible
-    Then "United States of America" text is visible
-    When User enters "A" for placeholder "Search for a country..."
-    Then "China" text is visible
-    Then "India" text is visible
-    Then "United States of America" text is visible
-    When User enters "Am" for placeholder "Search for a country..."
-    Then "China" text is not visible
-    Then "India" text is not visible
-    Then "United States of America" text is visible
+  Scenario: 01 - Default input value is entered
+    Then "dmitrykandratsenka" is entered for placeholder "Search for a repository..."
+    Then "Filter: All" text is visible
+    Then Github repository authored by "dmitrykandratsenka" is visible
 
-  Scenario: 02 - Filter by region
-    Then "China" text is visible
-    Then "India" text is visible
-    Then "United States of America" text is visible
-    Then "Russian Federation" text is visible
-    When User clicks on "Filter by Region"
-    When User selects menu option "Asia"
-    Then "China" text is visible
-    Then "India" text is visible
-    Then "United States of America" text is not visible
-    Then "Russian Federation" text is not visible
-    When User clicks on "Filter by Region: Asia"
-    When User selects menu option "America"
-    Then "China" text is not visible
-    Then "India" text is not visible
-    Then "United States of America" text is visible
-    Then "Russian Federation" text is not visible
-    When User clicks on "Filter by Region: America"
-    When User selects menu option "Europe"
-    Then "Filter by Region: Europe" text is visible
-    Then "China" text is not visible
-    Then "India" text is not visible
-    Then "United States of America" text is not visible
-    Then "Russian Federation" text is visible
+  Scenario Outline: 02 - Search by author name
+    When User enters "<author>" for placeholder "Search for a repository..."
+    Then Github repository authored by "<author>" is visible
+    Examples:
+      | author             |
+      | dmitrykandratsenka |
+      | microsoft          |
+      | facebook           |
+
+  Scenario Outline: 03 - Github repository card is displayed properly
+    When User enters "<value>" for placeholder "Search for a repository..."
+    Then Github repo card has text "<value>"
+    Then Github repo card has text "<id>"
+    Examples:
+      | value                                         | id        |
+      | DmitryKandratsenka/github-repositories-plugin | 683006117 |

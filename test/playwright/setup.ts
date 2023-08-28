@@ -5,14 +5,14 @@ import {
   setDefaultTimeout,
   setWorldConstructor,
   Status,
-} from "@cucumber/cucumber";
+} from '@cucumber/cucumber';
 import {
   DEFAULT_TIMEOUT,
   takeScreenShotOnFailure,
-} from "test/playwright/common-utils";
-import CustomWorld from "test/playwright/world";
+} from 'test/playwright/common-utils';
+import CustomWorld from 'test/playwright/world';
 
-const PWDEBUG = process.env.PWDEBUG === "1";
+const PWDEBUG = process.env.PWDEBUG === '1';
 
 setDefaultTimeout(DEFAULT_TIMEOUT);
 setWorldConstructor(CustomWorld);

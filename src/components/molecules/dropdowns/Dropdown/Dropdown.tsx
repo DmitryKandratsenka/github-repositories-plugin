@@ -1,27 +1,27 @@
-import { MouseEvent, useState } from "react";
-import Popover from "@mui/material/Popover";
-import { DropdownProps, Option } from "@/components/molecules";
+import { MouseEvent, useState } from 'react';
+import Popover from '@mui/material/Popover';
+import { DropdownProps, Option } from '@/components/molecules';
 import {
   DropdownButton,
   DropdownContainer,
   DropdownList,
   KeyboardArrowDownIcon,
-} from "@/components/molecules/dropdowns/Dropdown/Dropdown.styles";
-import { DropdownOption } from "@/components/molecules/dropdowns/Dropdown/DropdownOption";
+} from '@/components/molecules/dropdowns/Dropdown/Dropdown.styles';
+import { DropdownOption } from '@/components/molecules/dropdowns/Dropdown/DropdownOption';
 
-export function Dropdown({
+export function Dropdown<T extends string>({
   placeholder,
   onChange,
   selectedOption,
   options,
-}: DropdownProps) {
+}: DropdownProps<T>) {
   const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
 
   const handleClose = () => {
     setAnchorEl(null);
   };
 
-  const handleChange = (option: Option) => {
+  const handleChange = (option: Option<T>) => {
     onChange(option);
     handleClose();
   };
@@ -44,14 +44,14 @@ export function Dropdown({
         anchorEl={anchorEl}
         onClose={handleClose}
         anchorOrigin={{
-          horizontal: "left",
-          vertical: "bottom",
+          horizontal: 'left',
+          vertical: 'bottom',
         }}
         sx={{ marginTop: (theme) => theme.spacing(1) }}
       >
         <DropdownList role="menu">
           {options.map((option) => (
-            <DropdownOption
+            <DropdownOption<T>
               key={option.value}
               option={option}
               onClick={handleChange}

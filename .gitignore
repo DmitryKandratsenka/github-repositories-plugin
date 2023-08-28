@@ -29,11 +29,10 @@ yarn-error.log*
 test/playwright/videos/*
 !test/playwright/videos/.gitkeep
 test/playwright/reports/*
-test/playwright/screenshots/*
+test/playwright/screenshots/failures/*
 !test/playwright/screenshots/.gitkeep
 test/playwright/logs/*
 test/playwright/temp
 test/playwright/logs
 .idea/*
 coverage
-test/playwright/reports/cucumber-html-reporter.json

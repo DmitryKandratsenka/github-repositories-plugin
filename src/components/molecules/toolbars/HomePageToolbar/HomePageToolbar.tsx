@@ -1,10 +1,10 @@
-import { Box } from "@mui/material";
+import { Box } from '@mui/material';
 import {
-  FilterByRegionDropdown,
+  FilterDropdown,
   Toolbar,
   ToolbarItemContainer,
-} from "@/components/molecules";
-import { CountrySearchInput } from "@/components/atoms";
+} from '@/components/molecules';
+import { RepositorySearchInput } from '@/components/atoms';
 
 export function HomePageToolbar() {
   return (
@@ -12,13 +12,13 @@ export function HomePageToolbar() {
       <Box
         sx={{
           marginRight: (theme) => theme.spacing(5),
-          width: "100%",
+          width: '100%',
         }}
       >
-        <CountrySearchInput />
+        <RepositorySearchInput />
       </Box>
       <ToolbarItemContainer>
-        <FilterByRegionDropdown />
+        <FilterDropdown />
       </ToolbarItemContainer>
     </Toolbar>
   );
