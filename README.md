@@ -2,25 +2,26 @@
 
 ## The application was deployed using Github Pages: https://dmitrykandratsenka.github.io/github-repositories-plugin
 
-This project uses the following tech stack:
-#### ReactJS
-#### TypeScript
-#### Playwright
-#### Material UI
-#### Webpack
-#### NPM
+#### This project uses the following tech stack:
+ - ReactJS
+ - TypeScript
+ - Playwright
+ - Material UI
+ - Webpack
+ - NPM
 
-## Available Scripts
+## Local build and deployment
+Pre-installation: You have to use Node.js v18.x version.
 
-In the project directory, you can run:
+In the root directory, you should run:
 
+### `npm ci`
 ### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:8081](http://localhost:8081) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+To execute integration tests, run:
 
 ### `npm test`
 
@@ -34,4 +35,4 @@ Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The generated folder is being used for deployment.
